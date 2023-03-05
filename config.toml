@@ -1,4 +1,4 @@
-baseURL = 'https://jorgesanchez-e.github.io/'
+baseURL = 'https://www.jorgesanchez-e.dev/'
 title = 'My site in the world'
 theme = 'LoveIt'
 
@@ -490,10 +490,10 @@ enableEmoji = true
 
   # LoveIt NEW | 0.2.0 Analytics config
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "G-MYZ0DW68RK"
       # whether to anonymize IP
       anonymizeIP = true
     # Fathom Analytics
