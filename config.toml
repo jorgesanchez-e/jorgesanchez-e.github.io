@@ -5,6 +5,8 @@ theme = 'LoveIt'
 languageCode = 'en-us'
 languageName = 'English'
 hasCJKLanguage = false
+# default content language (English stays at the site root, Spanish under /es/)
+defaultContentLanguage = 'en'
 
 
 # whether to use robots.txt
@@ -20,35 +22,91 @@ enableEmoji = true
   name = "Jorge Sánchez"
   email = "jorge.sanchez.escobedo@gmail.com"
 
-# Menu config
-[menu]
-  [[menu.main]]
+# Multilingual config (Strategy A: translation by filename, e.g. post.en.md / post.es.md)
+[languages]
+  # English (default, served at the site root)
+  [languages.en]
+    languageCode = "en-us"
+    languageName = "English"
     weight = 1
-    identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
-  [[menu.main]]
+    title = "My site in the world"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Posts"
+        url = "/posts/"
+        title = ""
+      [[languages.en.menu.main]]
+        weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Tags"
+        url = "/tags/"
+        title = ""
+      [[languages.en.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Categories"
+        url = "/categories/"
+        title = ""
+    [languages.en.params]
+      # website title for Open Graph and Twitter Cards
+      title = "Working in progress"
+      # website description for RSS, SEO, Open Graph and Twitter Cards
+      description = "Working in progress"
+      [languages.en.params.app]
+        # site title override when added to a home screen or launcher
+        title = "My cool site"
+      [languages.en.params.home.profile]
+        subtitle = "Just my personal stuffs"
+
+  # Spanish (served under /es/)
+  [languages.es]
+    languageCode = "es"
+    languageName = "Español"
     weight = 2
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-  [[menu.main]]
-    weight = 3
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
+    title = "Mi sitio en el mundo"
+    [languages.es.menu]
+      [[languages.es.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Publicaciones"
+        url = "/posts/"
+        title = ""
+      [[languages.es.menu.main]]
+        weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Etiquetas"
+        url = "/tags/"
+        title = ""
+      [[languages.es.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Categorías"
+        url = "/categories/"
+        title = ""
+    [languages.es.params]
+      # título del sitio para Open Graph y Twitter Cards
+      title = "Trabajo en progreso"
+      # descripción del sitio para RSS, SEO, Open Graph y Twitter Cards
+      description = "Trabajo en progreso"
+      [languages.es.params.app]
+        # título del sitio al añadirlo a la pantalla de inicio o al menú de apps
+        title = "Mi sitio genial"
+      [languages.es.params.home.profile]
+        subtitle = "Solo mis cosas personales"
 
 [params]
   # site default theme ["auto", "light", "dark"]
