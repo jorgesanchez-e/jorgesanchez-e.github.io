@@ -1,7 +1,7 @@
 ---
 title: "Primer Post"
 date: 2023-03-04T13:22:09-06:00
-draft: false
+draft: true
 translationKey: "first"
 tags: ["hugo", "blog"]
 categories: ["general"]
